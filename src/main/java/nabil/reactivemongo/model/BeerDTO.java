@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class BeerDTO {
-    private Integer id;
+    private String id;
     @Size(min = 3, max = 255, message = "beerName must be between 3 and 255 characters")
     private String beerName;
 

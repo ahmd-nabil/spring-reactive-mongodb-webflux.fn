@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CustomerDTO {
     // todo data must be cleaned before deserialized (like trimming first, last names for example)
-    private Integer id;
+    private String id;
 
     @Size(min = 3, max = 255)
     private String firstName;
