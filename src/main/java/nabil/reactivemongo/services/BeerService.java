@@ -1,6 +1,5 @@
 package nabil.reactivemongo.services;
 
-import nabil.reactivemongo.domain.Beer;
 import nabil.reactivemongo.model.BeerDTO;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -11,6 +10,8 @@ import reactor.core.publisher.Mono;
 public interface BeerService {
     Flux<BeerDTO> findAll();
     Mono<BeerDTO> findById(String id);
+    Mono<BeerDTO> findFirstByBeerName(String beerName);
+    Flux<BeerDTO> findByBeerStyle(String beerStyle);
     Mono<BeerDTO> save(BeerDTO beerDTO);
     Mono<BeerDTO> update(String id, BeerDTO beerDTO);
     Mono<BeerDTO> patch(String id, BeerDTO beerDTO);
